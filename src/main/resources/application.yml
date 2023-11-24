@@ -1,6 +1,12 @@
+
 spring:
   profiles:
     active: usage_message
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 logging:
   level:
