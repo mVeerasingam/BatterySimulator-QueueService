@@ -1,4 +1,4 @@
-package com.example.queueservice_batterysim.producer;
+package com.example.queueservice_batterysim.publisher;
 
 import com.example.queueservice_batterysim.dto.BatterySim;
 import org.slf4j.Logger;
