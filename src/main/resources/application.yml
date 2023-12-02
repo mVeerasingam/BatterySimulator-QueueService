@@ -1,17 +1,2 @@
-
-spring:
-  profiles:
-    active: usage_message
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
-logging:
-  level:
-    org: ERROR
-
-tutorial:
-  client:
-    duration: 10000
+server.port = 9000
+spring.rabbitmq.addresses = localhost:5672
