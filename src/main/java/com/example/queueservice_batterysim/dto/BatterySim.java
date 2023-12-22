@@ -1,9 +1,15 @@
 package com.example.queueservice_batterysim.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 @Data
-public class BatterySim {
+@AllArgsConstructor
+@NoArgsConstructor
+public class BatterySim implements Serializable {
     private double time;
     private double upperVoltage;
     private double lowerVoltage;

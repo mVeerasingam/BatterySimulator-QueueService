@@ -2,6 +2,7 @@ package com.example.queueservice_batterysim.publisher;
 
 import com.example.queueservice_batterysim.dto.BatterySim;
 import com.example.queueservice_batterysim.dto.BatterySimMessage;
+import com.example.queueservice_batterysim.dto.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
