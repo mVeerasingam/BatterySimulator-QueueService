@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/queue")
 public class MessageJsonController {
     private RabbitMQJsonProducer jsonProducer;
-
     public MessageJsonController(RabbitMQJsonProducer jsonProducer) {
         this.jsonProducer = jsonProducer;
     }
