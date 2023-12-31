@@ -1,6 +1,6 @@
 package com.example.queueservice_batterysim.publisher;
 
-import com.example.queueservice_batterysim.dto.BatterySim;
+import com.example.queueservice_batterysim.dto.BatterySimMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -23,8 +23,8 @@ public class RabbitMQJsonProducer {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public void sendJsonMessage(BatterySim sim){
-        LOGGER.info(String.format("Json Message Sent -> %s", sim.toString()));
-        rabbitTemplate.convertAndSend(exchange, routingKeyJson, sim);
+    public void sendJsonMessage(BatterySimMessage simMessage){
+        LOGGER.info(String.format("Json Message Sent -> %s", simMessage.toString()));
+        rabbitTemplate.convertAndSend(exchange, routingKeyJson, simMessage);
     }
 }

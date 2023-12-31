@@ -1,6 +1,6 @@
 package com.example.queueservice_batterysim.Controller;
 
-import com.example.queueservice_batterysim.dto.BatterySim;
+import com.example.queueservice_batterysim.dto.BatterySimMessage;
 import com.example.queueservice_batterysim.publisher.RabbitMQJsonProducer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,8 +13,8 @@ public class MessageJsonController {
         this.jsonProducer = jsonProducer;
     }
     @PostMapping("/publish")
-    public ResponseEntity<String> sendJsonMessage(@RequestBody BatterySim sim){
-        jsonProducer.sendJsonMessage(sim);
+    public ResponseEntity<String> sendJsonMessage(@RequestBody BatterySimMessage simMessage){
+        jsonProducer.sendJsonMessage(simMessage);
         return ResponseEntity.ok("Json Message Sent to RabbitMQ ...");
     }
 }
