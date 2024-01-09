@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/queue")
 public class MessageJsonController {
     private RabbitMQJsonProducer jsonProducer;
+    private long uniqueId = 0;
+
     public MessageJsonController(RabbitMQJsonProducer jsonProducer) {
         this.jsonProducer = jsonProducer;
     }
     @PostMapping("/publish")
     public ResponseEntity<String> sendJsonMessage(@RequestBody BatterySimMessage simMessage){
+        simMessage.setId(++uniqueId);
         jsonProducer.sendJsonMessage(simMessage);
-        return ResponseEntity.ok("Json Message Sent to RabbitMQ ...");
+        return ResponseEntity.ok("Simulation Data sent to Rabbit MQ. \nYour simulation ID is: " + simMessage.getId());
     }
 }
 
