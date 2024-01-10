@@ -48,3 +48,7 @@ docker pull mveerasingam/batterysimulator_jobmanagerservice:rabbitmq
 
 - "driveCycle" - Produces a single cell drive cycle
 
+### Supporting Microservices
+- [Battery Simulator Microservice 🔋💥](https://github.com/mVeerasingam/Battery-Simulator-Microservice)
+- [Battery Simulator Job Manager](https://github.com/mVeerasingam/BatterySimulator-JobManager)
+- [Battery Simulator DB Operations](https://github.com/mVeerasingam/BatterySimulator_DatabaseOperations)
