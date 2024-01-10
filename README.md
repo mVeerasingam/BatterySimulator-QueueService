@@ -1,4 +1,5 @@
 # BatterySimulator-QueueService
+## Authors: Mark Veerasingam and Lucas Jeanes
 Rabbit MQ Message Broker for simulation jobs.
 This microservice is the producer for the BatterySim JSON Message to be consumed.
 
